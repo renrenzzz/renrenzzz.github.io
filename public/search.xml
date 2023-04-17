@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>unable to access &#39;https://***.github.io.git/&#39;:Failed to connect to github.com port</title>
-    <url>/posts/7ea9f20/</url>
-    <content><![CDATA[<p>hexo d 提交代码到github时报错</p>
-<p><img src="/posts/7ea9f20/image-20230415235817860.png" alt="image-20230415235817860"></p>
-<p>可执行如下代码取消git的https代理</p>
-<span id="more"></span>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">//取消http代理</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">//取消https代理 </span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Hexo</category>
-        <category>问题</category>
-        <category>已解决</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>问题</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo配置NexT主题</title>
     <url>/posts/a3a69e9b/</url>
     <content><![CDATA[<h1 id="下载Next"><a href="#下载Next" class="headerlink" title="下载Next"></a>下载Next</h1><p>在站点根目录执行</p>
@@ -176,7 +155,7 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#101;&#x73;&#108;&#105;&#110;&#116;&#64;&#52;&#46;&#120;">&#101;&#x73;&#108;&#105;&#110;&#116;&#64;&#52;&#46;&#120;</a> babel-eslint@8 –save-dev</p>
+<p>执行此命令可能会不成功，提示你缺少相应的依赖，比如babel-eslint、mini-css-extract-plugin、webpack-cli…<br>使用npm命令安装即可，比如npm install <a href="mailto:&#x65;&#x73;&#108;&#105;&#x6e;&#x74;&#64;&#52;&#x2e;&#120;">&#x65;&#x73;&#108;&#105;&#x6e;&#x74;&#64;&#52;&#x2e;&#120;</a> babel-eslint@8 –save-dev</p>
 </blockquote>
 <p>修改根目录站点配置文件<code>config.yml</code>，改为：</p>
 <figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">permalink:</span> <span class="string">posts/:abbrlink/</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">	<span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">	<span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br></pre></td></tr></table></figure>
@@ -250,46 +229,23 @@
         <category>操作</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>NexT</tag>
         <tag>小白</tag>
         <tag>操作流水线</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hexo图片不展示问题</title>
-    <url>/posts/d45490fe/</url>
-    <content><![CDATA[<p>本地使用的是Typora编写的markdown文件，图片规则使用的相对路径</p>
-<p><img src="/posts/d45490fe/image-20230416211900024.png" alt="image-20230416211900024"></p>
-<p>​	</p>
+    <title>unable to access &#39;https://***.github.io.git/&#39;:Failed to connect to github.com port</title>
+    <url>/posts/7ea9f20/</url>
+    <content><![CDATA[<p>hexo d 提交代码到github时报错</p>
+<p><img src="/posts/7ea9f20/image-20230415235817860.png" alt="image-20230415235817860"></p>
+<p>可执行如下代码取消git的https代理</p>
 <span id="more"></span>
 
-<ol>
-<li><p>确认hexo的_config配置文件中的<code>post_asset_folder</code>是否设置为<code>true</code></p>
-</li>
-<li><p>使用插件</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这边有个坑，如果是使用的是这个版本的</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">npm install hexo-asset-image -- save</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">则还是不会显示出来图片，因为这个版本的生成的图片路径会是一个错误的路径，如果非要用这个版本那么可以考虑修改一下这个插件的index.js文件,见备注；</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">还有就是 CodeFalling 总是会失败，如下图，我这边是多执行了几遍有一遍成功了。</span></span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo s 运行查看</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">//取消http代理</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">//取消https代理 </span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
 
-<p>失败:</p>
-<p><img src="/posts/d45490fe/image-20230416233527481.png" alt="image-20230416233527481"></p>
-<p>成功：</p>
-<p><img src="/posts/d45490fe/image-20230416234013396.png" alt="image-20230416234013396"></p>
-<p>备注：</p>
-<blockquote>
-<p>使用 Hexo-asset-image 插件静态图片路径会变成一个错误的路径.<br>我们可以看到错误的 URL 中, 在 host:port 后, 明显多了一个 .cn 的资源目录, 这在使用域名部署的时候, 明显是不正确的<br>错误: <a href="http://blog.diswares.cn/.cn/java-multithreading-thread-pool/juc-thread-pools.png">http://blog.diswares.cn/.cn/java-multithreading-thread-pool/juc-thread-pools.png</a><br>正确: <a href="http://blog.diswares.cn/java-multithreading-thread-pool/juc-thread-pools.png">http://blog.diswares.cn/java-multithreading-thread-pool/juc-thread-pools.png</a></p>
-<p>解决方案</p>
-<ol>
-<li><p>cd node_modules&#x2F;hexo-asset-image&#x2F;</p>
-</li>
-<li><p>vim index.js</p>
-</li>
-<li><p>在 59 行附近, 将以下代码替换掉</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// $(this).attr(&#x27;src&#x27;, config.root + link + src);</span></span><br><span class="line"><span class="comment">// console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span></span><br><span class="line">$(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, data.<span class="property">permalink</span> +src);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span> + data.<span class="property">permalink</span> + src);</span><br></pre></td></tr></table></figure></li>
-</ol>
-</blockquote>
-</li>
-</ol>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -416,10 +372,54 @@
         <category>操作</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>小白</tag>
         <tag>操作流水线</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo图片不展示问题</title>
+    <url>/posts/d45490fe/</url>
+    <content><![CDATA[<p>本地使用的是Typora编写的markdown文件，图片规则使用的相对路径</p>
+<p><img src="/posts/d45490fe/image-20230416211900024.png" alt="image-20230416211900024"></p>
+<p>​	</p>
+<span id="more"></span>
+
+<ol>
+<li><p>确认hexo的_config配置文件中的<code>post_asset_folder</code>是否设置为<code>true</code></p>
+</li>
+<li><p>使用插件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">这边有个坑，如果是使用的是这个版本的</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">npm install hexo-asset-image -- save</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">则还是不会显示出来图片，因为这个版本的生成的图片路径会是一个错误的路径，如果非要用这个版本那么可以考虑修改一下这个插件的index.js文件,见备注；</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">还有就是 CodeFalling 总是会失败，如下图，我这边是多执行了几遍有一遍成功了。</span></span><br><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo s 运行查看</span><br></pre></td></tr></table></figure>
+
+<p>失败:</p>
+<p><img src="/posts/d45490fe/image-20230416233527481.png" alt="image-20230416233527481"></p>
+<p>成功：</p>
+<p><img src="/posts/d45490fe/image-20230416234013396.png" alt="image-20230416234013396"></p>
+<p>备注：</p>
+<blockquote>
+<p>使用 Hexo-asset-image 插件静态图片路径会变成一个错误的路径.<br>我们可以看到错误的 URL 中, 在 host:port 后, 明显多了一个 .cn 的资源目录, 这在使用域名部署的时候, 明显是不正确的<br>错误: <a href="http://blog.diswares.cn/.cn/java-multithreading-thread-pool/juc-thread-pools.png">http://blog.diswares.cn/.cn/java-multithreading-thread-pool/juc-thread-pools.png</a><br>正确: <a href="http://blog.diswares.cn/java-multithreading-thread-pool/juc-thread-pools.png">http://blog.diswares.cn/java-multithreading-thread-pool/juc-thread-pools.png</a></p>
+<p>解决方案</p>
+<ol>
+<li><p>cd node_modules&#x2F;hexo-asset-image&#x2F;</p>
+</li>
+<li><p>vim index.js</p>
+</li>
+<li><p>在 59 行附近, 将以下代码替换掉</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// $(this).attr(&#x27;src&#x27;, config.root + link + src);</span></span><br><span class="line"><span class="comment">// console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span></span><br><span class="line">$(<span class="variable language_">this</span>).<span class="title function_">attr</span>(<span class="string">&#x27;src&#x27;</span>, data.<span class="property">permalink</span> +src);</span><br><span class="line"><span class="variable language_">console</span>.<span class="property">info</span>&amp;&amp;<span class="variable language_">console</span>.<span class="title function_">info</span>(<span class="string">&quot;update link as:--&gt;&quot;</span> + data.<span class="property">permalink</span> + src);</span><br></pre></td></tr></table></figure></li>
+</ol>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>问题</category>
+        <category>已解决</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
 </search>
